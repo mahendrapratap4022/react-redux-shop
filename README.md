@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React and redux demo app with fakestoreapi API for showing products.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
