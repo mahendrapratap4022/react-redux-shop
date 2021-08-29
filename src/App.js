@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './container/Header';
+import ProductListing from './container/ProductListing';
+import ProductDetail from './container/ProductDetail';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>
+        <Header />
+        <br />
+        <br />
+        <br />
+        <Switch>
+          <Route exact path='/' component={ProductListing} />
+          <Route path='/product/:id' component={ProductDetail} />
+          <Route>404 Not Fount!</Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
